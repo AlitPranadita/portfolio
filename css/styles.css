@@ -4137,59 +4137,79 @@ td:last-child {
 }
 
 
-/* ===================================================================
- * # NUMBERS
- *
- *
- * ------------------------------------------------------------------- */
-.s-numbers {
-    padding-top     : var(--vspace-5_5);
-    padding-bottom  : var(--vspace-4);
+/* ================================
+   TOOLS SECTION
+================================ */
+.s-tools {
+    padding-top: var(--vspace-3);
+    padding-bottom: var(--vspace-5);
     background-color: var(--color-gray-10);
-    color           : var(--color-text-light);
 }
 
-.s-numbers h5 {
-    font-family  : var(--font-1);
-    font-weight  : 500;
-    margin-top   : 0;
-    margin-bottom: var(--vspace-0_75);
+.s-tools h2 {
+    margin-bottom: var(--vspace-1);
 }
 
-.counter-items__item {
-    flex         : none;
-    width        : 50%;
-    margin-bottom: var(--vspace-0_625);
+.s-tools p {
+    max-width: 600px;
 }
 
-.counter-items .num {
-    display       : inline-flex;
-    align-items   : center;
-    font-family   : var(--font-1);
-    font-weight   : 700;
-    font-size     : var(--text-huge-3);
-    letter-spacing: -0.035em;
-    line-height   : 1;
-    color         : var(--color-3-dark);
+/* GRID */
+.tools-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: var(--vspace-2);
 }
 
-.counter-items span {
-    font-size  : 0.5em;
-    margin-left: 0.1em;
+/* ITEM */
+.tool-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: calc(25% - 15px);
+    padding: 15px 20px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    background: #fff;
+    transition: all 0.3s ease;
 }
 
-/* ------------------------------------------------------------------- 
- * responsive:
- * numbers
- * ------------------------------------------------------------------- */
+/* HOVER */
+.tool-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+/* ICON */
+.tool-item img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+/* TEXT */
+.tool-item h5 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.tool-item span {
+    font-size: 13px;
+    color: #666;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
 @media screen and (max-width: 1000px) {
-    .counter-items .num {
-        font-size: var(--text-huge-1);
+    .tool-item {
+        width: calc(50% - 10px);
     }
 }
 
-@media screen and (max-width: 700px) {
-    .counter-items__item {
+@media screen and (max-width: 600px) {
+    .tool-item {
         width: 100%;
     }
 }
